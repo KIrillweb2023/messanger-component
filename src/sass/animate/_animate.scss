@@ -1,0 +1,19 @@
+@keyframes dark-theme{
+    0%{
+        opacity: 0;
+        transition: 0.4s all;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes icon-animate-theme{
+    to{
+        top: 15px;
+        transition: 0.3s;
+    }
+    from{
+        top: 0px;
+    }
+}

@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Bold/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../../fonts/Bold/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Bold/Gilroy-Bold.woff2') format('woff2'),
+        url('../../fonts/Bold/Gilroy-Bold.woff') format('woff'),
+        url('../../fonts/Bold/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Semibold/Gilroy-Semibold.eot');
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('../../fonts/Semibold/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Semibold/Gilroy-Semibold.woff2') format('woff2'),
+        url('../../fonts/Semibold/Gilroy-Semibold.woff') format('woff'),
+        url('../../fonts/Semibold/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Regular/Gilroy-Regular.eot');
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('../../fonts/Regular/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Regular/Gilroy-Regular.woff2') format('woff2'),
+        url('../../fonts/Regular/Gilroy-Regular.woff') format('woff'),
+        url('../../fonts/Regular/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../../fonts/Medium/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Medium/Gilroy-Medium.woff2') format('woff2'),
+        url('../../fonts/Medium/Gilroy-Medium.woff') format('woff'),
+        url('../../fonts/Medium/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

@@ -1,0 +1,35 @@
+.main{
+    &.active{
+        animation: dark-theme 0.4s;
+        .main{
+            &__wrapper{
+                &__item{
+                    &__title{
+                        color: #fff;
+                    }
+                    &__subtitle{
+                        color: #fff;
+                    }
+                    &__btn{
+                        &:hover{
+                            box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+                            transition: 0.3s all;
+                        }
+                    }
+                }
+
+            }
+            &__subwrapper{
+                &__line{
+                    background-color: #fff;
+                }
+                &__text{
+                    color: #fff;
+                }
+            }
+            &__background{
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+}
