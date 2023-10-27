@@ -17,3 +17,13 @@
         top: 0px;
     }
 }
+
+@keyframes search-wrapper-animate{
+    to{
+        top: -66px;
+        transition: 0.4s;
+    }
+    from{
+        top: 0px;
+    }
+}
