@@ -63,24 +63,27 @@
                 position: relative;
                 top: 0;
                 transition: 0.4s all;
+                border-bottom: 1px solid #a3a3a3;
+                padding-bottom: 52px;
                 &.active{
                     //animation: search-wrapper-animate 0.4s;
                     top: -66px;
                     .chat__wrapper__aside__search-close{
                         transform: rotate(-90deg);
+                        transition: 0.3s all;
                     }
                 }
                 &-input{
-                    width: 290px;
+                    width: 75%;
                     height: 45px;
                     border-radius: 5px;
-                    background: #DBDBDB;
+                    background: #e6e6e6;
                     padding: 0 10px;
                     font-size: 16px;
                     color: #565656;
                 }
                 &-button{
-                    width: 50px;
+                    width: 15%;
                     height: 45px;
                     border-radius: 5px;
                     background: #6A00F1;
@@ -95,18 +98,21 @@
                     cursor: pointer;
                     z-index: 10;
                     width: 12px;
+                    transition: 0.3s all;
                 }
             }
             &__items{
-                margin-top: 60px;
+                margin-top: 40px;
                 padding: 0 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                row-gap: 20px;
+                row-gap: 15px;
                 width: 100%;
                 transition: 0.4s all;
+                // overflow-y: scroll;
+                // height: 70%;
                 &__block{
                     display: flex;
                     justify-content: flex-start;
@@ -118,6 +124,9 @@
                     cursor: pointer;
                     &:nth-child(1){
                         background: #6a00f11f;
+                    }
+                    &:hover{
+                        background-color: #ececec;
                     }
                     &-img{
                         width: 45px;
@@ -275,7 +284,7 @@
                 top: 0;
                 left: 0;  
                 z-index: -1;  
-                background: url('../../img/main-img/main.png') center (center / cover) no-repeat;
+                background: url('../img/main-img/main.png') center (center / cover) no-repeat;
                 &-block{
                     position: absolute;
                     top: 0;

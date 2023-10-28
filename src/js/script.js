@@ -66,7 +66,7 @@ function showSearchBlock(wrapper, btn, block){
     btn.addEventListener('click', (e) =>{
         wrapper.classList.toggle('active');
         if(wrapper.classList.contains('active')){
-            block.style.marginTop = '10px';
+            block.style.marginTop = '-20px';
             console.log(1);
         } else {
             block.style.marginTop = '';
