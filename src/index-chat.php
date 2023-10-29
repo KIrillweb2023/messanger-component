@@ -40,27 +40,22 @@
                         <div class="messanges-text">
                             <div class="messange">На главном экране воссоздать плавную анимацию, текст должен быть в нужных заголовках и подзаголовках <span class="date">00.00</span>
                             </div>
-                            <div class="messange">На главном экране воссоздать плавную анимацию, текст должен быть в нужных заголовках и подзаголовках <span class="date">00.00</span>
-                            </div>
-                            <div class="messange">На главном экране воссоздать плавную анимацию, текст должен быть в нужных заголовках и подзаголовках <span class="date">00.00</span>
-                            </div>
-                            <div class="messange">На главном экране воссоздать плавную анимацию, текст должен быть в нужных заголовках и подзаголовках <span class="date">00.00</span>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <form action="#" class="chat__wrapper__main__send">
+                <form action="#"  class="chat__wrapper__main__send">
                     <label for="" class="chat__wrapper__main__send__search">
                         <img src="./icons/smile/smiley_osdea050hi8f 1.svg" alt="smile" class="chat__wrapper__main__send__search__smile">
-                        <input class="chat__wrapper__main__send__search__input" type="text" placeholder="Напишите сообщение....">
+                        <input type="text" class="incoming_id" name="incoming_id" value="108752986" hidden="">
+                        <input name="message" class="chat__wrapper__main__send__search__input" type="text" placeholder="Напишите сообщение....">
                         <img src="./icons/file/file.svg" alt="file" class="chat__wrapper__main__send__search__file">
                     </label>
 
                     <div class="chat__wrapper__main__send__sound">
                         <img src="./icons/speaker/speaker.svg" alt="speaker" class="chat__wrapper__main__send__sound-img">
                     </div>
-                    <button type="submit" class="chat__wrapper__main__send__button"><img src="./icons/sendMess/send.svg" alt="arrow"></button>
+                    <button type="submit" class="active"><img src="./icons/sendMess/send.svg" alt="arrow"></button>
                 </form>
             </div>
             <aside class="chat__wrapper__aside">
