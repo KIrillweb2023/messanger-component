@@ -4,61 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
 <body>
     <section class="chat">
         <div class="chat__wrapper">
-            <div class="chat__wrapper__main">
-                <header class="chat__wrapper__main__header">
-                    <div class="chat__wrapper__main__header-close">
-                        <img src="./icons/arrow/arrow-left.svg" alt="" class="chat__wrapper__main__header-close__img">
-                        <p class="chat__wrapper__main__header-close__text">Назад</p>
-                    </div>
-                    
-                    <div class="chat__wrapper__main__header-theme">
-                        <img src="./icons/theme/grey.svg" alt="theme" class="chat__wrapper__main__header-theme__img">
-                    </div>
-                </header>
-
-                <div class="chat__wrapper__main__people">
-                    <div class="chat__wrapper__main__people__accaunt">
-                        <img src="./icons/accaunt/accaunt-photo.svg" alt="accaunt-photo" class="chat__wrapper__main__people__accaunt-img">
-                        <div class="chat__wrapper__main__people__accaunt-text">
-                            <h3 class="chat__wrapper__main__people__accaunt-text__name">Глиб Гашишик</h3>
-                            <p class="chat__wrapper__main__people__accaunt-text__status">онлайн</p>
-                        </div> 
-                    </div>
-                    <div class="chat__wrapper__main__people__buttons">
-                        <button class="chat__wrapper__main__people__buttons-btn rename">Редактировать</button>
-                        <button class="chat__wrapper__main__people__buttons-btn delete">Удалить чат</button>
-                    </div>
-                </div>
-
-                <div class="chat__wrapper__main__messange">
-                    <div class="chat__wrapper__main__messange-block">
-                        <div class="messanges-text">
-                            <div class="messange">На главном экране воссоздать плавную анимацию, текст должен быть в нужных заголовках и подзаголовках <span class="date">00.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <form action="#"  class="chat__wrapper__main__send">
-                    <label for="" class="chat__wrapper__main__send__search">
-                        <img src="./icons/smile/smiley_osdea050hi8f 1.svg" alt="smile" class="chat__wrapper__main__send__search__smile">
-                        <input type="text" class="incoming_id" name="incoming_id" value="108752986" hidden="">
-                        <input name="message" class="chat__wrapper__main__send__search__input" type="text" placeholder="Напишите сообщение....">
-                        <img src="./icons/file/file.svg" alt="file" class="chat__wrapper__main__send__search__file">
-                    </label>
-
-                    <div class="chat__wrapper__main__send__sound">
-                        <img src="./icons/speaker/speaker.svg" alt="speaker" class="chat__wrapper__main__send__sound-img">
-                    </div>
-                    <button type="submit" class="active"><img src="./icons/sendMess/send.svg" alt="arrow"></button>
-                </form>
-            </div>
-            <aside class="chat__wrapper__aside">
+        <aside class="chat__wrapper__aside">
                 <header class="chat__wrapper__aside__header">
                     <div class="chat__wrapper__aside__header-logo">
                         <img src="./icons/logo/logo.svg" alt="logo" class="chat__wrapper__aside__header-logo__img">
@@ -137,13 +89,55 @@
                 <footer class="chat__wrapper__aside__accaunt">
                     <img src="./icons/accaunt-aside_icon/accaunt-img.svg" alt="accaunt-icon" class="chat__wrapper__aside__accaunt-icon">
                     <div class="chat__wrapper__aside__accaunt-text">
-                        <h3 class="chat__wrapper__aside__accaunt-text_title">Accaunt</h3>
-                        <p class="chat__wrapper__aside__accaunt-text_subtitle">your application</p>
+                        <h3 class="chat__wrapper__aside__accaunt-text_title">Kirill</h3>
+                        <p class="chat__wrapper__aside__accaunt-text_subtitle">kirill@gmail.com</p>
                     </div>
                     <img src="./icons/setting-icon/setting.svg" alt="setting" class="chat__wrapper__aside__accaunt_setting">
                     <img src="./icons/exit-icon/exit.svg" alt="exit" class="chat__wrapper__aside__accaunt_exit">
                 </footer>
             </aside>
+            <div class="chat__wrapper__main">
+
+                <div class="chat__wrapper__main__people">
+                    <div class="chat__wrapper__main__people__accaunt">
+                        <img src="./icons/accaunt/accaunt-photo.svg" alt="accaunt-photo" class="chat__wrapper__main__people__accaunt-img">
+                        <div class="chat__wrapper__main__people__accaunt-text">
+                            <h3 class="chat__wrapper__main__people__accaunt-text__name">Глеб Владленович</h3>
+                            <p class="chat__wrapper__main__people__accaunt-text__status">онлайн</p>
+                        </div> 
+                    </div>
+                    <div class="chat__wrapper__main__people__buttons">
+                        <button class="chat__wrapper__main__people__buttons-btn rename">Редактировать</button>
+                        <button class="chat__wrapper__main__people__buttons-btn delete">Удалить чат</button>
+                    </div>
+                </div>
+
+                <div class="chat__wrapper__main__messange">
+                    <div class="chat__wrapper__main__messange-block">
+                        
+                    <div class="block">
+                            
+                            </div>
+
+                    </div>
+                  
+                </div>
+
+                <form action="php/functions/func_chat.php" method="POST" enctype="multipart/form-data" class="chat__wrapper__main__send">
+                    <label for="" class="chat__wrapper__main__send__search">
+                        <img src="./icons/smile/smiley_osdea050hi8f 1.svg" alt="smile" class="chat__wrapper__main__send__search__smile">
+                        <input type="text" class="incoming_id" name="incoming_id" value="108752986" hidden="">
+                        <input name="message" class="chat__wrapper__main__send__search__input" type="text" placeholder="Напишите сообщение....">
+                        <label for="file-input" class="chat__wrapper__main__send__search__label">
+                            <span class="material-symbols-outlined">image</span>
+                            <input type="file" name="image" id="file-input" hidden="" class="chat__wrapper__main__send__search__file">
+                        </label>
+                        <button type="submit" name="submit" class="chat__wrapper__main__send__search__button active"><img src="./icons/sendMess/send.svg" alt="arrow"></button>
+                    </label>
+                </form>
+            </div>
+
+         
         </div>
     </section>
 

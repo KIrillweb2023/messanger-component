@@ -17,10 +17,8 @@
         <div class="main__block">
             <img src="./icons/theme/dark.svg" alt="theme" class="main__block__theme">
         </div>
-        <?php require ('php/layout/login.php');
-              require ('php/layout/logout.php');
-              require ('php/functions/func_logout.php');
-        ?>
+        <?php require ('php/layout/login.php'); require ('php/layout/logout.php'); require ('php/functions/func_logout.php'); ?>
+    </section>
     <script async src="./js/script.js"></script>
 </body>
 </html>

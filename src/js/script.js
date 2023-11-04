@@ -66,15 +66,16 @@ function showSearchBlock(wrapper, btn, block){
     btn.addEventListener('click', (e) =>{
         wrapper.classList.toggle('active');
         if(wrapper.classList.contains('active')){
-            block.style.marginTop = '-20px';
+            block.style.marginTop = '-50px';
             console.log(1);
         } else {
             block.style.marginTop = '';
         }
     });
-    
 }
-showSearchBlock(searchWrapper, btnSearch, block);
+if(block){
+    showSearchBlock(searchWrapper, btnSearch, block);
+}
 
 
 
@@ -106,69 +107,72 @@ if(menu){
 // chat 
 
 const form = document.querySelector('.chat__wrapper__main__send');
-const incoming_id = form.querySelector(".incoming_id").value
-const chatbox = document.querySelector('.chat__wrapper__main__messange-block');
-const btnbox = document.querySelector('.active');
+const incoming_id = document.querySelector('.incoming_id');
+const chatbox = document.querySelector('.chat__wrapper__main__messange .block');
+const btnbox = document.querySelector('.chat__wrapper__main__send__search__button');
 const search = document.querySelector('.chat__wrapper__main__send__search__input');
 
 
-form.onsubmit = (e)=>{
-    e.preventDefault();
+if(search){
+    postDateMessange();
 }
 
-search.focus();
 
-search.onkeyup = ()=>{
-    if(search.value != ""){
-        btnbox.classList.add("active");
-    }else{
-        btnbox.classList.remove("active");
+function postDateMessange(){
+    search.focus();
+
+    search.onkeyup = ()=>{
+        if(search.value != ""){
+            btnbox.classList.add("active");
+        }else{
+            btnbox.classList.remove("active");
+        }
     }
-}
 
 
 
-btnbox.onclick = ()=>{
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/functions/func_chat_get.php", true);
-    xhr.onload = ()=>{
-      if(xhr.readyState === XMLHttpRequest.DONE){
-          if(xhr.status === 200){
-              search.value = "";
-              scrollToBottom();
-          }
-      }
-    }
-    let formData = new FormData(form);
-    xhr.send(formData);
-}
-chatbox.onmouseenter = ()=>{
-    chatbox.classList.add("active");
-}
-
-chatbox.onmouseleave = ()=>{
-    chatbox.classList.remove("active");
-}
-
-setInterval(() =>{
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/functions/func_chat_get.php", true);
-    xhr.onload = ()=>{
-      if(xhr.readyState === XMLHttpRequest.DONE){
-          if(xhr.status === 200){
-            let data = xhr.response;
-            chatbox.innerHTML = data;
-            if(!chatbox.classList.contains("active")){
+    btnbox.onclick = ()=>{
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "php/functions/func_chat_get.php", true);
+        xhr.onload = ()=>{
+        if(xhr.readyState === XMLHttpRequest.DONE){
+            if(xhr.status === 200){
+                search.value = "";
                 scrollToBottom();
-              }
-          }
-      }
+            }
+        }
+        }
+        let formData = new FormData(form);
+        xhr.send(formData);
+    }
+    chatbox.onmouseenter = ()=>{
+        chatbox.classList.add("active");
+    }
+
+    chatbox.onmouseleave = ()=>{
+        chatbox.classList.remove("active");
+    }
+
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "php/functions/func_chat_get.php", true);
+        xhr.onload = ()=>{
+            if(xhr.readyState === XMLHttpRequest.DONE){
+                if(xhr.status === 200){
+                let data = xhr.response;
+                chatbox.innerHTML = data;
+                if(!chatbox.classList.contains("active")){
+                    scrollToBottom();
+                }
+            }
+        }
     }
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.send("incoming_id="+incoming_id);
-}, 500);
+    xhr.send("incoming_id="+incoming_id.value);
 
-function scrollToBottom(){
-    chatbox.scrollTop = chatbox.scrollHeight;
-  }
+
+    function scrollToBottom(){
+        chatbox.scrollTop = chatbox.scrollHeight;
+    }
+}
   
