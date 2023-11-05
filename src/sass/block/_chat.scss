@@ -56,16 +56,19 @@
                 }
             }
             &__search{
+                background: #fff; 
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 column-gap: 10px;
-                margin-top: 15px;
+                padding-top: 20px;
                 position: relative;
                 top: 0;
+                z-index: 5;
                 transition: 0.4s all;
                 border-bottom: 1px solid #a3a3a3;
                 padding-bottom: 46px;
+                //box-shadow: 0px 4px 8px 0px rgba(87, 87, 87, 0.25);
                 &.active{
                     //animation: search-wrapper-animate 0.4s;
                     top: -66px;
@@ -94,7 +97,7 @@
                 }
                 &-close{
                     position: absolute;
-                    top: 60px;
+                    top: 77px;
                     transform: rotate(90deg);
                     cursor: pointer;
                     z-index: 10;
@@ -103,17 +106,21 @@
                 }
             }
             &__items{
-                margin-top: 20px;
-                padding: 0 10px;
+               // margin-top: 20px;
+                padding: 220px 10px 30px 10px;
                 display: flex;
-                justify-content: center;
+                //justify-content: center;
                 align-items: center;
                 flex-direction: column;
                 row-gap: 15px;
                 width: 100%;
                 transition: 0.4s all;
-                // overflow-y: scroll;
-                // height: 70%;
+                overflow-y: scroll;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
                 &__block{
                     display: flex;
                     justify-content: flex-start;
@@ -236,13 +243,11 @@
                     display: flex;
                     align-items: center;
                     &-btn{
-                        width: 30px;
-                        height: 30px;
+                        font-size: 16px;
+                        padding: 5px 20px;
+                        font-weight: 700;
                         border-radius: 30px;
                         background-color: #fff;
-                        &-img{
-                            width: 100%;
-                        }
                         &:hover{
                             background: #EDEDED;
                         }

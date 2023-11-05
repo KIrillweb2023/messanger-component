@@ -66,7 +66,7 @@ function showSearchBlock(wrapper, btn, block){
     btn.addEventListener('click', (e) =>{
         wrapper.classList.toggle('active');
         if(wrapper.classList.contains('active')){
-            block.style.marginTop = '-50px';
+            block.style.marginTop = '-80px';
             console.log(1);
         } else {
             block.style.marginTop = '';
@@ -88,10 +88,6 @@ const close = document.querySelector('.menu__block__header-close');
 function showMenu(open, menu, close){
     open.addEventListener('click', () =>{
         menu.classList.add('active');
-        open.style.background = '#ffffff6d';
-        setTimeout(() =>{
-            open.style.background = '';
-        }, 200);
     });
     close.addEventListener('click', () =>{
         menu.classList.remove('active');
